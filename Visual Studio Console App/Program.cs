@@ -11,7 +11,9 @@ namespace Visual_Studio_Console_App
         static void Main(string[] args)
         {
             Opdracht1 opdracht1 = new Opdracht1();
-            opdracht1.Start();
+            Opdracht2 opdracht2 = new Opdracht2();
+            opdracht2.Start();
+
         }
     }
 }
