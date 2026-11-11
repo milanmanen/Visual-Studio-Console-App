@@ -10,7 +10,8 @@ namespace Visual_Studio_Console_App
     {
         static void Main(string[] args)
         {
-                Console.WriteLine("Hallo wereld!"); Console.ReadLine();
+            Opdracht1 opdracht1 = new Opdracht1();
+            opdracht1.Start();
         }
     }
 }
