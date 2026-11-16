@@ -21,6 +21,7 @@ namespace Visual_Studio_Console_App
         public void Start()
         {
             bool opnieuw = true;
+            string antwoord;
 
             while (opnieuw)
             {
@@ -39,7 +40,7 @@ namespace Visual_Studio_Console_App
                         SlowWrite("A giant man opens the now tiny seeming door and grabs you with one hand. You instantly get crushed.");
                         SlowWrite("GAME OVER how could you have known??");
                         SlowWrite("GAME OVER! Do you want to play again? YES or NO?");
-                        string antwoord = Console.ReadLine();
+                        antwoord = Console.ReadLine();
 
                         if (antwoord == "NO")
                         {
@@ -49,41 +50,243 @@ namespace Visual_Studio_Console_App
                         {
                             Console.Clear();
                         }
-                        else if (pad11 == "OPEN")
+                    }
+                    else if (pad11 == "OPEN")
+                    {
+                        SlowWrite("You open the door...");
+                        SlowWrite("after walking in the door you now stand in a giant room. after looking around you see a giant man in the corner of the room reading what looks like a cook book.");
+                        SlowWrite("Stunned by his size you look around again. You see another DOOR, a big SHOTGUN and a box of MATCHES... or.. you could just TALK to the giant man.");
+                        string pad111 = Console.ReadLine();
+                        if (pad111 == "DOOR")
                         {
-                            SlowWrite("You open the door...");
-                            SlowWrite("after walking in the door you now stand in a giant room. after looking around you see a giant man in the corner of the room reading what looks like a cook book.");
-                            SlowWrite("Stunned by his size you look around again. You see another DOOR, a big SHOTGUN and a box of MATCHES... or.. you could just TALK to the giant man.");
-                            string pad111 = Console.ReadLine();
-                            if (pad111 == "DOOR")
+                            SlowWrite("In a panic you hastily open the door and run through.");
+                            SlowWrite("Theres a pit with lava right behind the door and you fall in it and die.");
+                            SlowWrite("GAME OVER too hasty bro.");
+                            SlowWrite("GAME OVER! Do you want to play again? YES or NO?");
+                            antwoord = Console.ReadLine();
+
+                            if (antwoord == "NO")
+                            {
+                                opnieuw = false;
+                            }
+                            else if (antwoord == "YES")
+                            {
+                                Console.Clear();
+                            }
+                        }
+                        else if (pad111 == "SHOTGUN")
+                        {
+                            SlowWrite("You pick up the huge shotgun aim it at the giant and without thinking you pull the trigger.");
+                            SlowWrite("The shotgun was way too heavy, it blows ur arms off and you bleed out.");
+                            SlowWrite("GAME OVER should have went to the gym after all...");
+                            SlowWrite("GAME OVER! Do you want to play again? YES or NO?");
+                            antwoord = Console.ReadLine();
+
+                            if (antwoord == "NO")
+                            {
+                                opnieuw = false;
+                            }
+                            else if (antwoord == "YES")
+                            {
+                                Console.Clear();
+                            }
+                        }
+                        else if (pad111 == "MATCHES")
+                        {
+                            SlowWrite("You grab the box of matches and light the entire house on fire.");
+                            SlowWrite("Quick! you have to run you can either go back through the FRONT door or run through to the BACK door.");
+                            string pad1111 = Console.ReadLine();
+                            if (pad1111 == "FRONT")
+                            {
+                                SlowWrite("You quickly run back to the cave where you came from but the giant man cant escape the house becuase he made his doors to small.. he dies.");
+                                SlowWrite("Feeling depressed from guilt you run back and burn yourself alive together with the giant man.");
+                                SlowWrite("GAME OVER atleast you still had your humanity i guess..");
+                                SlowWrite("GAME OVER! Do you want to play again? YES or NO?");
+                                antwoord = Console.ReadLine();
+
+                                if (antwoord == "NO")
+                                {
+                                    opnieuw = false;
+                                }
+                                else if (antwoord == "YES")
+                                {
+                                    Console.Clear();
+                                }
+                            }
+                            else if (pad1111 == "BACK")
                             {
                                 SlowWrite("In a panic you hastily open the door and run through.");
                                 SlowWrite("Theres a pit with lava right behind the door and you fall in it and die.");
                                 SlowWrite("GAME OVER too hasty bro.");
-                            }
-                            else if (pad111 == "SHOTGUN")
-                            {
-                                SlowWrite("You pick up the huge shotgun aim it at the giant and without thinking you pull the trigger.");
-                                SlowWrite("The shotgun was way too heavy, it blows ur arms off and you bleed out.");
-                                SlowWrite("GAME OVER should have went to the gym after all...");
-                            }
-                            else if (pad111 == "MATCHES")
-                            {
-                                SlowWrite("You grab the box of matches and light the entire house on fire.");
-                                SlowWrite("Quick! you have to run you can either go back through the FRONT door or run through to the BACK door.");
-                                string pad1111 = Console.ReadLine();
-                                if (pad1111 == "FRONT")
+                                SlowWrite("GAME OVER! Do you want to play again? YES or NO?");
+                                antwoord = Console.ReadLine();
+
+                                if (antwoord == "NO")
                                 {
-                                    SlowWrite("You quickly run back to the cave where you came from but the giant man cant escape the house becuase he made his doors to small.. he dies.");
-                                    SlowWrite("Feeling depressed from guilt you run back and burn yourself alive together with the giant man.");
-                                    SlowWrite("GAME OVER atleast you still had your humanity i guess..");
+                                    opnieuw = false;
                                 }
-                                else if (pad1111 == "BACK")
+                                else if (antwoord == "YES")
                                 {
-                                    SlowWrite("In a panic you hastily open the door and run through.");
-                                    SlowWrite("Theres a pit with lava right behind the door and you fall in it and die.");
-                                    SlowWrite("GAME OVER too hasty bro.");
+                                    Console.Clear();
                                 }
+                            }
+                        }
+                        else if (pad111 == "TALK")
+                        {
+                            SlowWrite("You approach the giant man and say hey.");
+                            SlowWrite("The giant man gets startled and hastily turns around, his pants are off and hes blushing then he tells you that if you dont tell anyone what happened here he'll lead you to the exit of the cave.");
+                            SlowWrite("you agree to not tell anyone and he leads you to the exit");
+                            SlowWrite("You finally see daylight, congratulations you win. Do you want to play again and uncover more endings? YES or NO?");
+                            antwoord = Console.ReadLine();
+
+                            if (antwoord == "NO")
+                            {
+                                opnieuw = false;
+                            }
+                            else if (antwoord == "YES")
+                            {
+                                Console.Clear();
+                            }
+                        }
+                    }
+                    else if (pad11 == "CRACK")
+                    {
+                        SlowWrite("You crawl through the crack.");
+                        SlowWrite("On the other side of the of the crack you find a treasure, you take a gold coin.");
+                        SlowWrite("you get crushed by a boulder the moment you put the coin in your pocket.");
+                        SlowWrite("GAME OVER did you learn nothing from movies?");
+                        SlowWrite("GAME OVER! Do you want to play again? YES or NO?");
+                        antwoord = Console.ReadLine();
+
+                        if (antwoord == "NO")
+                        {
+                            opnieuw = false;
+                        }
+                        else if (antwoord == "YES")
+                        {
+                            Console.Clear();
+                        }
+                    }
+                }
+                else if(pad1 == "STRAIGHT")
+                {
+                    SlowWrite("You decide to go into the middle path.");
+                    SlowWrite("You see the exit of the cave and daylight but before that there is 3 different paths one is PARKOUR the other is a PUZZLE and the last is a RIDDLE.");
+                    string pad12 = Console.ReadLine();
+                    if (pad12 == "PARKOUR")
+                    {
+                        SlowWrite("You decide to test your athletics by trying to complete the parkour.");
+                        SlowWrite("unfortunately you're a out of shape gamer and you fall into a deep hole and splat on the ground.");
+                        SlowWrite("GAME OVER i promise it wasnt targeted.");
+                        SlowWrite("GAME OVER! Do you want to play again? YES or NO?");
+                        antwoord = Console.ReadLine();
+
+                        if (antwoord == "NO")
+                        {
+                            opnieuw = false;
+                        }
+                        else if (antwoord == "YES")
+                        {
+                            Console.Clear();
+                        }
+                    }
+                    else if (pad12 == "PUZZLE")
+                    {
+                        SlowWrite("You decide to try your luck on the puzzle.");
+                        SlowWrite("Infront of you there are 3 switches ONE, TWO and THREE, one of these switches will make the bridge extend and you will be able to cross, you are only allowed to pick once and you cant see if the bridge has been extended before you get there.");
+                        string pad121 = Console.ReadLine();
+                        if (pad121 == "ONE")
+                        {
+                            SlowWrite("You picked the most obvious and the first one.");
+                            SlowWrite("You take place in the cart and it starts to roll you to the bridge.");
+                            SlowWrite("YOU PICKED WRONG the cart starts falling and crashes on the ground.");
+                            SlowWrite("GAME OVER it was a 1 in 3 chance, very unlucky.");
+                            SlowWrite("GAME OVER! Do you want to play again? YES or NO?");
+                            antwoord = Console.ReadLine();
+
+                            if (antwoord == "NO")
+                            {
+                                opnieuw = false;
+                            }
+                            else if (antwoord == "YES")
+                            {
+                                Console.Clear();
+                            }
+                        }
+                        else if (pad121 == "TWO")
+                        {
+                            SlowWrite("You think the middle lever is the savest option.");
+                            SlowWrite("You take your place in the cart and start rolling toward the bridge.");
+                            SlowWrite("YOU PICKED RIGHT you look infront of you and you see the bridge towards the daylight fully extended.");
+                            SlowWrite("still in the cart you roll outside into freedom.");
+                            SlowWrite("You finally see daylight, congratulations you win. Do you want to play again and uncover more endings? YES or NO?");
+                            antwoord = Console.ReadLine();
+
+                            if (antwoord == "NO")
+                            {
+                                opnieuw = false;
+                            }
+                            else if (antwoord == "YES")
+                            {
+                                Console.Clear();
+                            }
+                        }
+                        else if (pad121 == "THREE")
+                        {
+                            SlowWrite("You for some reason pick the last one.");
+                            SlowWrite("You take place in the cart and it starts to roll you to the bridge.");
+                            SlowWrite("YOU PICKED WRONG the cart starts falling and crashes on the ground.");
+                            SlowWrite("GAME OVER! it was a 1 in 3 chance, very unlucky.");
+                            SlowWrite("GAME OVER! Do you want to play again? YES or NO?");
+                            antwoord = Console.ReadLine();
+
+                            if (antwoord == "NO")
+                            {
+                                opnieuw = false;
+                            }
+                            else if (antwoord == "YES")
+                            {
+                                Console.Clear();
+                            }
+                        }
+                    }
+                    else if (pad12 == "RIDDLE")
+                    {
+                        SlowWrite("You trust your brain to get you through this.");
+                        SlowWrite("You walk into a side room, on the wall there's a riddle: What do you call a sleeping bull?");
+                        SlowWrite("A : a bulldozer B : a snoring cow C : a lazy steak");
+                        string pad122 = Console.ReadLine();
+                        if (pad122 == "A")
+                        {
+                            SlowWrite("You pick A was it a guess?");
+                            SlowWrite("CORRECT! A bridge to freedom extends and you walk into daylight.");
+                            SlowWrite("You finally see daylight, congratulations you win. Do you want to play again and uncover more endings? YES or NO?");
+                            antwoord = Console.ReadLine();
+
+                            if (antwoord == "NO")
+                            {
+                                opnieuw = false;
+                            }
+                            else if (antwoord == "YES")
+                            {
+                                Console.Clear();
+                            }
+                        }
+                        if (pad122 == "B")
+                        {
+                            SlowWrite("You pick B was it a guess?");
+                            SlowWrite("WRONG! The whole room EXPLODES.");
+                            SlowWrite("GAME OVER! It was a good guess.");
+                            SlowWrite("GAME OVER! Do you want to play again? YES or NO?");
+                            antwoord = Console.ReadLine();
+
+                            if (antwoord == "NO")
+                            {
+                                opnieuw = false;
+                            }
+                            else if (antwoord == "YES")
+                            {
+                                Console.Clear();
                             }
                         }
                     }
