@@ -258,7 +258,7 @@ namespace Visual_Studio_Console_App
                         string pad122 = Console.ReadLine();
                         if (pad122 == "A")
                         {
-                            SlowWrite("You pick A was it a guess?");
+                            SlowWrite("You pick A, was it a guess?");
                             SlowWrite("CORRECT! A bridge to freedom extends and you walk into daylight.");
                             SlowWrite("You finally see daylight, congratulations you win. Do you want to play again and uncover more endings? YES or NO?");
                             antwoord = Console.ReadLine();
@@ -272,9 +272,9 @@ namespace Visual_Studio_Console_App
                                 Console.Clear();
                             }
                         }
-                        if (pad122 == "B")
+                        else if (pad122 == "B")
                         {
-                            SlowWrite("You pick B was it a guess?");
+                            SlowWrite("You pick B, was it a guess?");
                             SlowWrite("WRONG! The whole room EXPLODES.");
                             SlowWrite("GAME OVER! It was a good guess.");
                             SlowWrite("GAME OVER! Do you want to play again? YES or NO?");
@@ -289,6 +289,41 @@ namespace Visual_Studio_Console_App
                                 Console.Clear();
                             }
                         }
+                        else if (pad122 == "C")
+                        {
+                            SlowWrite("You pick C, was it a guess?");
+                            SlowWrite("WRONG! The whole room EXPLODES.");
+                            SlowWrite("GAME OVER! It was a good guess.");
+                            SlowWrite("GAME OVER! Do you want to play again? YES or NO?");
+                            antwoord = Console.ReadLine();
+
+                            if (antwoord == "NO")
+                            {
+                                opnieuw = false;
+                            }
+                            else if (antwoord == "YES")
+                            {
+                                Console.Clear();
+                            }
+                        }
+                    }
+                }
+                else if (pad1 == "RIGHT")
+                {
+                    SlowWrite("You decide to go into the path leading to the right.");
+                    SlowWrite("The path is very tight and narrow.");
+                    SlowWrite("You get stuck and no one comes to help you.");
+                    SlowWrite("GAME OVER! Dead at the first option?? How unfair...");
+                    SlowWrite("GAME OVER! Do you want to play again? YES or NO?");
+                    antwoord = Console.ReadLine();
+
+                    if (antwoord == "NO")
+                    {
+                        opnieuw = false;
+                    }
+                    else if (antwoord == "YES")
+                    {
+                        Console.Clear();
                     }
                 }
             }

@@ -15,7 +15,7 @@ namespace Visual_Studio_Console_App
             Console.WriteLine("Wat is jouw naam?");
             string naam = Console.ReadLine();
 
-            Console.WriteLine("En wat is jouw leeftijd?");
+            Console.WriteLine("En wat is jouw leeftijd? Write it in NUMBERS");
             int leeftijd = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Hoi " + naam + ", je bent " + leeftijd + " jaar oud!");
