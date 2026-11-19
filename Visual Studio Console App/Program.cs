@@ -12,7 +12,7 @@ namespace Visual_Studio_Console_App
         {
             Opdracht1 opdracht1 = new Opdracht1();
             Opdracht2 opdracht2 = new Opdracht2();
-            opdracht1.Start();
+            opdracht2.Start();
 
         }
     }
