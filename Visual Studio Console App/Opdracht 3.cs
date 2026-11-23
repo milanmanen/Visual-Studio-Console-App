@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Visual_Studio_Console_App
+{
+    internal class Opdracht3
+    {
+        public void start()
+        {
+            Console.WriteLine("Opdracht 3!");
+
+
+        }
+    }
+}
