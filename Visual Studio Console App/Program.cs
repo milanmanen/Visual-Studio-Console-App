@@ -13,8 +13,8 @@ namespace Visual_Studio_Console_App
             Opdracht1 opdracht1 = new Opdracht1();
             Opdracht2 opdracht2 = new Opdracht2();
             Opdracht3 opdracht3 = new Opdracht3();
-            opdracht3.Start();
-
+            Opdracht4 opdracht4 = new Opdracht4();
+            opdracht4.Start();
         }
     }
 }
