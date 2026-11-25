@@ -16,9 +16,13 @@ namespace Visual_Studio_Console_App
             Console.WriteLine("Hallo, is het vandaag zonnig, bewolkt of regent het?");
             string weer = Console.ReadLine();
             Console.WriteLine("en wat voor temperatuur is het?");
-            if (int.TryParse(Console.ReadLine(), out int temperatuur))
+            int temperatuur;
+
+            while (!int.TryParse(Console.ReadLine(), out temperatuur))
             {
-                if (weer == "zonnig" && temperatuur >= 20)
+                Console.WriteLine("Dat is geen geldig getal! Vul opnieuw je temperatuur in:");
+            }
+              if (weer == "zonnig" && temperatuur >= 20)
                 {
                     Console.WriteLine("Het is lekker zonnig vandaag je hoeft geen jas te dragen, draag zonnebrand en ga lekker genieten van het weer.");
                 }
@@ -30,7 +34,7 @@ namespace Visual_Studio_Console_App
                 {
                     Console.WriteLine("Het is lekker weer vandaag je hoeft je niet echt zorgen te maken over de zon of een jas tenzij je het fris krijgt in de schaduw.");
                 }
-                else if (weer == "bewolkt" && temperatuur < 20 && temperatuur >10)
+                else if (weer == "bewolkt" && temperatuur < 20 && temperatuur >=10)
                 {
                     Console.WriteLine("Het is fris buiten dus doe maar een jas aan, neem voor de zekerheid misschien een paraplu mee.");
                 }
@@ -42,7 +46,23 @@ namespace Visual_Studio_Console_App
                 {
                     Console.WriteLine("BRRRR het vriest buiten doe sowieso een jas, wanten, misschien een muts en goeie schoenen aan zodat je niet uitgleidt en lekker warm blijft");
                 }
+                else if (weer == "regent" || weer == "het regent" || weer == "regen" || weer == "Regent" || weer == "Het regent" || weer == "Regen" && temperatuur >=20)
+                {
+                    Console.WriteLine("Het is lekker warm maar het regent wel dus een jas hoeft niet maar neem wel een paraplu mee.");
+                }
+                else if (weer == "regent" || weer == "het regent" || weer == "regen" || weer == "Regent" || weer == "Het regent" || weer == "Regen" && temperatuur <20 && temperatuur >=10)
+                {
+                    Console.WriteLine("Buiten is het een beetje fris en het regent dus doe een jas aan en neem een paraplu mee.");
+                }
+                else if (weer == "regent" || weer == "het regent" || weer == "regen" || weer == "Regent" || weer == "Het regent" || weer == "Regen" && temperatuur <10 && temperatuur >0)
+                {
+                    Console.WriteLine("Brrrrrr Het is koud en het regent ook nog, doe sowieso een jas aan vandaag en neem ook een paraplu. Doe misschien ook wanten aan.");
+                }
+                else if (weer == "regent" || weer == "het regent" || weer == "regen" || weer == "Regent" || weer == "Het regent" || weer == "Regen" && temperatuur >= 0)
+                {
+                    Console.WriteLine("BRRRRRRR Het vriest buiten en het regent kijk uit want het kan glad zijn, doe sowieso een jas aan en neem een paraplu mee, daarnaast kan je ook nog wanten en een muts aaandoen.");
+                }
             }
         }
     }
-}
+

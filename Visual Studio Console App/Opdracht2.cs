@@ -17,7 +17,7 @@ namespace Visual_Studio_Console_App
             foreach (char letter in text)
             {
                 Console.Write(letter);
-                Thread.Sleep(5);
+                Thread.Sleep(40);
             }
             Console.WriteLine();
         }
